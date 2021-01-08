@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // to create your ALPHA_VANTAGE_APIKEY go to https://www.alphavantage.co/support/#api-key
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/run",
+            "env": {
+                "ALPHA_VANTAGE_APIKEY": "**CHANGE_WITH_YOURS**",
+                "IT_DEFAULT_MARKET": "SAO"
+            },
+            "args": [
+                "quote",
+                "-s",
+                "ITSA4"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Yarn test",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "yarn test",
+            "env": {
+                "ALPHA_VANTAGE_APIKEY": "NDE51PS6PFH2G19H",
+                "IT_DEFAULT_MARKET": "SAO"
+            },
+            "args": [
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest All",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": [
+                "--runInBand"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            }
+        }
+    ]
+}
